@@ -1,4 +1,4 @@
-export default {
+const objectConfig = {
   get: (obj, propKey) => {
     return obj[propKey]
   },
@@ -23,3 +23,5 @@ export default {
     return Object.assign({}, obj)
   },
 }
+
+export default objectConfig
