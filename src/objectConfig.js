@@ -22,6 +22,12 @@ const objectConfig = {
   clone: obj => {
     return Object.assign({}, obj)
   },
+  emptyObjectOrMap: () => {
+    return {}
+  },
+  emptyListOrArray: () => {
+    return []
+  },
 }
 
 export default objectConfig
