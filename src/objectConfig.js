@@ -10,7 +10,7 @@ const objectConfig = {
   getKeys: obj => {
     return Object.keys(obj)
   },
-  isObject: item => {
+  isObjectOrMap: item => {
     return typeof item === 'object'
   },
   isArrayOrList: item => {
