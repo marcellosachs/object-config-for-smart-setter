@@ -28,6 +28,7 @@ const objectConfig = {
   emptyListOrArray: () => {
     return []
   },
+  toThisConfigsType: item => item,
 }
 
 export default objectConfig
