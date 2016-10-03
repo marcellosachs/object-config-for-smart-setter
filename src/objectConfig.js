@@ -19,8 +19,11 @@ const objectConfig = {
   push: (arr, item) => {
     return arr.concat([item])
   },
-  clone: obj => {
-    return Object.assign({}, obj)
+  clone: item => {
+    const x = Array.isArray(item)
+    ? []
+    : {}
+    return Object.assign(x, item)
   },
   emptyObjectOrMap: () => {
     return {}
