@@ -20,10 +20,15 @@ const objectConfig = {
     return arr.concat([item])
   },
   clone: item => {
-    const x = Array.isArray(item)
-    ? []
-    : {}
-    return Object.assign(x, item)
+    const isArray = Array.isArray(item)
+    // make sure Array condition comes first, since Arrays are also objects
+    if (Array.isArray(item)) {
+      return Object.assign([], item)
+    } else if (typeof(item) === 'object') {
+      return Object.assign({}, item)
+    } else {
+      return item
+    }
   },
   emptyObjectOrMap: () => {
     return {}
